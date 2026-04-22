@@ -1,0 +1,8 @@
+*.pth
+*.bin
+*.keras
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+results/
