@@ -23,7 +23,7 @@ Unsupervised anomaly detection system trained on clean CIFAR-10 images and evalu
 |---|---|---|---|
 | Convolutional Autoencoder | 0.914 | 0.994 | +0.080 |
 
-Increasing training set from 4,000 to 10,000 images and epochs from 3 to 10 pushed the CAE from below PCA to above it — confirming that deep learning surpasses classical methods when given sufficient data.
+Increasing training set from 4,000 to 10,000 images and epochs from 3 to 10 pushed the CAE from below PCA to above it, confirming that deep learning surpasses classical methods when given sufficient data.
 
 ### Robustness Sweep
 
@@ -42,7 +42,7 @@ The denoising autoencoder was evaluated across 5 corruption types at 3 severity 
 ## Models
 
 ### 1. Random Baseline
-Assigns random anomaly scores. Confirms evaluation code is correct — expected AUROC near 0.50.
+Assigns random anomaly scores. Confirms evaluation code is correct, expected AUROC near 0.50.
 
 ### 2. Isolation Forest
 Trained on 15-dimensional image-statistic features (channel means, std, min, max, high-frequency energy). Learns the distribution of clean image statistics and scores anomalies as statistical outliers. Test AUROC: 0.930.
@@ -69,11 +69,11 @@ Retrained with 10,000 images, 10 epochs, early stopping (patience=3), and latent
 
 ## Corruption Types
 
-- **Gaussian noise** — additive random noise
-- **Salt and pepper** — random black and white pixels
-- **Gaussian blur** — spatial smoothing
-- **Brightness** — global intensity shift
-- **Cutout** — random rectangular occlusion
+- **Gaussian noise** - additive random noise
+- **Salt and pepper** - random black and white pixels
+- **Gaussian blur** - spatial smoothing
+- **Brightness** - global intensity shift
+- **Cutout** - random rectangular occlusion
 
 Severity ranges from 1 (mild) to 5 (severe) across all corruption types.
 
